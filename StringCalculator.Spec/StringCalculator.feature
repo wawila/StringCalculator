@@ -26,3 +26,4 @@ Scenario: Add five numbers
 	| 90      |
 	When I press add
 	Then the result should be 244 on the screen
+

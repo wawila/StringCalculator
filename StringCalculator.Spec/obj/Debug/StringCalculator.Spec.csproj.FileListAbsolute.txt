@@ -6,3 +6,7 @@ c:\users\david chavarria\documents\visual studio 2015\Projects\StringCalculator\
 c:\users\david chavarria\documents\visual studio 2015\Projects\StringCalculator\StringCalculator.Spec\obj\Debug\StringCalculator.Spec.csprojResolveAssemblyReference.cache
 c:\users\david chavarria\documents\visual studio 2015\Projects\StringCalculator\StringCalculator.Spec\obj\Debug\StringCalculator.Spec.dll
 c:\users\david chavarria\documents\visual studio 2015\Projects\StringCalculator\StringCalculator.Spec\obj\Debug\StringCalculator.Spec.pdb
+C:\Users\David Chavarria\Documents\Visual Studio 2015\Projects\StringCalculator\StringCalculator.Spec\bin\Debug\Castle.Core.dll
+C:\Users\David Chavarria\Documents\Visual Studio 2015\Projects\StringCalculator\StringCalculator.Spec\bin\Debug\Moq.dll
+C:\Users\David Chavarria\Documents\Visual Studio 2015\Projects\StringCalculator\StringCalculator.Spec\bin\Debug\Castle.Core.xml
+C:\Users\David Chavarria\Documents\Visual Studio 2015\Projects\StringCalculator\StringCalculator.Spec\bin\Debug\Moq.xml
