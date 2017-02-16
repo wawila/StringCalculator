@@ -13,6 +13,7 @@ namespace StringCalculator.Spec
         private string accountNumber;
         private Mock<IGradeRepository> _gradeRepositoryMock = new Mock<IGradeRepository>();
         private double average;
+        private Mock<IEmailManager> _emailManagerMock = new Mock<IEmailManager>();
 
         [Given(@"That the student with '(.*)' account number")]
         public void GivenThatTheStudentWithAccountNumber(string p0)
@@ -30,13 +31,28 @@ namespace StringCalculator.Spec
         [When(@"I calculate the average grade")]
         public void WhenICalculateTheAverageGrade()
         {
-            gradeManager = new GradeManager(_gradeRepositoryMock.Object);
+            gradeManager = new GradeManager(_gradeRepositoryMock.Object, _emailManagerMock.Object);
             average = gradeManager.CalculateAverage(accountNumber);
         }
         
         [Then(@"the average grade should be (.*) on the screen")]
         public void ThenTheAverageGradeShouldBeOnTheScreen(Decimal p0)
         {
+
         }
+
+        [Then(@"Send an email to the parents")]
+        public void ThenSendAnEmailToTheParents()
+        {
+            _emailManagerMock.Verify(email => email.SendEmail("La riata"), Times.Once);
+        }
+
+        [Then(@"Don't send an email to the parents")]
+        public void ThenDonTSendAnEmailToTheParents()
+        {
+            _emailManagerMock.Verify(email => email.SendEmail(It.IsAny<string>()), Times.Never);
+        }
+
+
     }
 }

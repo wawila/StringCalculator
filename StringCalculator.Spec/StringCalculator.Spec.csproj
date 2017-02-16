@@ -71,6 +71,7 @@
       <DependentUpon>Grades.feature</DependentUpon>
     </Compile>
     <Compile Include="GradesSteps.cs" />
+    <Compile Include="IEmailManager.cs" />
     <Compile Include="IGradeRepository.cs" />
     <Compile Include="StringCalculator.feature.cs">
       <AutoGen>True</AutoGen>

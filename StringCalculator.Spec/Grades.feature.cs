@@ -105,6 +105,51 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I calculate the average grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
  testRunner.Then("the average grade should be 79.64 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+ testRunner.And("Don\'t send an email to the parents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("When the student fails the class send an email to the parents")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grades")]
+        public virtual void WhenTheStudentFailsTheClassSendAnEmailToTheParents()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When the student fails the class send an email to the parents", ((string[])(null)));
+#line 17
+ this.ScenarioSetup(scenarioInfo);
+#line 18
+ testRunner.Given("That the student with \'21341276\' account number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "AccountNumber",
+                        "ClassName",
+                        "GradeValue",
+                        "UV"});
+            table2.AddRow(new string[] {
+                        "21341276",
+                        "Analisis1",
+                        "52",
+                        "1"});
+            table2.AddRow(new string[] {
+                        "21341276",
+                        "Lenguajes",
+                        "56",
+                        "1"});
+            table2.AddRow(new string[] {
+                        "21341276",
+                        "DisenoLogico",
+                        "60",
+                        "1"});
+#line 19
+ testRunner.And("These are the following grades", ((string)(null)), table2, "And ");
+#line 24
+ testRunner.When("I calculate the average grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+ testRunner.Then("the average grade should be 56 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 26
+ testRunner.And("Send an email to the parents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

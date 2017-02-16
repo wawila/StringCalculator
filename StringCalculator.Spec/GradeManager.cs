@@ -6,10 +6,12 @@ namespace StringCalculator.Spec
     public class GradeManager
     {
         private IGradeRepository _gradeRepository;
+        private IEmailManager _emailManager;
 
-        public GradeManager(IGradeRepository gradeRepository)
+        public GradeManager(IGradeRepository gradeRepository, IEmailManager emailManager)
         {
             _gradeRepository = gradeRepository;
+            _emailManager = emailManager;
         }
 
         public double CalculateAverage(string accountNumber)
@@ -24,7 +26,14 @@ namespace StringCalculator.Spec
                 average += grade.GradeValue * grade.UV;
             }
 
-            return average/UVs;
+            average /= UVs;
+
+            if (average < 60)
+            {
+                _emailManager.SendEmail("La riata");
+            }
+
+            return average;
         }
     }
 }
